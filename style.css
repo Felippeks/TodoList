@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+  margin: 0;
+  background-color: #5e252577;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: xx-large;
+  font-style: oblique;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  background-color: #f5574c;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 20%;
+  margin-left: auto;
+}
+
+button:hover {
+  background-color: #bd1105;
+}
+
+img {
+    width: 35%;
+    height: 25%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+#novaTarefa {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: navajowhite;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+#adicionarTarefa {
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+#adicionarTarefa:hover {
+  background-color: #45a049;
+}
+
+#listaDeTarefas {
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.05em;
+  
+}
+
+@keyframes desintegrar {
+    0% { opacity: 1; }
+    100% { opacity: 0; transform: scale(0.1); }
+  }
+  
+  .desintegrando {
+    animation: desintegrar 0.5s linear forwards;
+  }
+  
