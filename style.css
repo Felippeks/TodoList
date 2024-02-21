@@ -1,9 +1,20 @@
 :root {
-  --modal-font: Arial, sans-serif;
-  --modal-font-weight: 700;
-  --modal-font-style: oblique;
-  --modal-font-size: 16px;
-  --modal-text-transform: uppercase;
+  --primary-color: #f5574c;
+  --primary-color-hover: #bd1105;
+  --secondary-color: #4caf50;
+  --secondary-color-hover: #45a049;
+  --background-color: #5e252577;
+  --modal-background-color: rgba(0,0,0,0.4);
+  --modal-content-color: #f7dbdbd5;
+  --close-button-color: #e90e0e;
+  --font-family: Arial, sans-serif;
+  --font-family-alt: "Roboto", sans-serif;
+  --font-size: 16px;
+  --font-size-alt: 18px;
+  --font-size-h1: xx-large;
+  --font-size-h1-alt: larger;
+  --border-radius: 20px;
+  --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 body {
@@ -14,14 +25,15 @@ body {
   gap: 20px;
   height: 100vh;
   margin: 0;
-  background-color: #5e252577;
-  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  font-family: var(--font-family);
 }
 
 h1 {
   text-align: center;
-  font-size: xx-large;
+  font-size: var(--font-size-h1);
   font-style: oblique;
+  font-family: var(--font-family);
 }
 
 ul {
@@ -36,52 +48,69 @@ li {
 }
 
 button {
-  background-color: #f5574c;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   border: none;
   cursor: pointer;
-  border-radius: 20%;
+  border-radius: var(--border-radius);
   margin-left: auto;
 }
 
 button:hover {
-  background-color: #bd1105;
+  background-color: var(--primary-color-hover);
 }
 
 img {
   width: 35%;
   height: 25%;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
-#novaTarefa, #adicionarTarefa {
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  gap: 20px;
+}
+
+#novaTarefa {
+  width: 300px;
   padding: 8px;
-  font-size: 16px;
-  border-radius: 20px;
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
   border: navajowhite;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--box-shadow);
 }
 
 #adicionarTarefa {
   width: 100px;
-  background-color: #4caf50;
+  padding: 10px;
+  font-size: var(--font-size);
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 #adicionarTarefa:hover {
-  background-color: #45a049;
+  background-color: var(--secondary-color-hover);
 }
 
 #listaDeTarefas {
-  width: 400px;
+  width: 30%;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--box-shadow);
   text-transform: uppercase;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size);
+  font-family: var(--font-family-alt);
   line-height: 1.6;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.05em;
@@ -101,7 +130,7 @@ img {
   animation: desintegrar 0.5s linear forwards;
 }
 
-.modal, .modal2, .modal3 {
+.modal, .modal2, .modal3{
   display: none;
   position: fixed;
   z-index: 1;
@@ -110,25 +139,25 @@ img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-  font-family: var(--modal-font);
-  font-weight: var(--modal-font-weight);
-  font-style: var(--modal-font-style);
-  font-size: var(--modal-font-size);
-  text-transform: var(--modal-text-transform);
+  background-color: var(--modal-background-color);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-style: oblique;
+  font-size: var(--font-size);
+  text-transform: uppercase;
 }
 
 .modal-content, .modal2-content, .modal3-content {
-  background-color: #f7dbdbd5;
+  background-color: var(--modal-content-color);
   margin: 5% auto;
   padding: 20px;
   border: 2px solid #888;
   width: 30%;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
 }
 
 .close-button, .close-button2, .close-button3 {
-  color: #e90e0e;
+  color: var(--close-button-color);
   float: right;
   font-size: 30px;
   font-weight: bold;
@@ -138,7 +167,7 @@ img {
 
 @media (max-width: 480px) {
   body {
-    font-size: 18px;
+    font-size: var(--font-size-alt);
     margin: 10px;
     padding: 10px;
   }
@@ -148,32 +177,37 @@ img {
     height: auto;
   }
 
-  #container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  h1 {
+    font-size: var(--font-size-h1-alt);
   }
 
-  #novaTarefa, #adicionarTarefa {
+  #novaTarefa {
     padding: 14px;
     font-size: 12px;
-    margin-top: 8px;
+  }
+
+  #adicionarTarefa {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    font-size: 12px;
   }
 
   #listaDeTarefas {
-    width: 90%;
+    width: 85%;
   }
-
   .modal-content, .modal2-content, .modal3-content {
     width: 80%;
     height: 10%;
     margin: 2% auto;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
   }
 
-  .modal, .modal2, .modal3 {
-    font-size: 12px;
+  .modal, .modal2, .modal3{
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-style: oblique;
+  font-size: 12px;
+  text-transform: uppercase;
   }
 }
