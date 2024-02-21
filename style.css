@@ -171,6 +171,14 @@ img {
   width: 25px;
   height: 25px; 
 }
+
+svg.feather.feather-trash-2 {
+  fill: red;
+  width: 30px;
+  height: 30px;
+}
+
+
 @media (max-width: 480px) {
   body {
     font-size: var(--font-size-alt);

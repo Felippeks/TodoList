@@ -45,9 +45,8 @@ function adicionarTarefaClick() {
   const botaoRemover = document.createElement("button");
   botaoRemover.classList.add("botao-remover");
 
-  const lixeiraSVG = document.createElement("img");
-  lixeiraSVG.src = "/assets/lixeira.svg";
-  lixeiraSVG.alt = "Lixeira";
+  const lixeiraSVG = document.getElementById("lixeira").cloneNode(true);
+  lixeiraSVG.style.display = "block";
   botaoRemover.appendChild(lixeiraSVG);
 
   botaoRemover.addEventListener("click", function () {
