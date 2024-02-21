@@ -193,12 +193,9 @@ svg.feather.feather-trash-2 {
   height: 30px;
 }
 
-/* svg.feather.feather-trash-2:hover {
+ svg.feather.feather-trash-2:hover {
   fill: var(--primary-color-hover);
-} */
-svg.feather.feather-trash-2:active {
-  fill: var(--primary-color-hover);
-}
+} 
 
 @media (max-width: 480px) {
   body {
