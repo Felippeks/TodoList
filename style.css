@@ -4,14 +4,14 @@
   --secondary-color: #4caf50;
   --secondary-color-hover: #45a049;
   --background-color: #5e252577;
-  --modal-background-color: rgba(0,0,0,0.4);
+  --modal-background-color: rgba(0, 0, 0, 0.4);
   --modal-content-color: #f7dbdbd5;
   --close-button-color: #e90e0e;
   --font-family: Arial, sans-serif;
   --font-family-alt: "Roboto", sans-serif;
   --font-size: 16px;
   --font-size-alt: 18px;
-  --border-radius: 20px;
+  --border-radius: 10px;
   --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 body {
@@ -35,18 +35,19 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-button{
+button {
   text-align: center;
   border: none;
   margin-left: auto;
 }
 
-#header{
+#header {
   text-align: center;
   font-weight: 700;
   font-style: oblique;
 }
-#confirmDelete, #cancelDelete {
+#confirmDelete,
+#cancelDelete {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
@@ -57,7 +58,8 @@ button{
   width: 80px;
   height: 30px;
 }
-#confirmDelete:hover, #cancelDelete:hover {
+#confirmDelete:hover,
+#cancelDelete:hover {
   background-color: var(--primary-color-hover);
 }
 img {
@@ -135,7 +137,9 @@ img {
 .desintegrando {
   animation: desintegrar 0.3s linear forwards;
 }
-.modal, .modal2, .modal3{
+.modal,
+.modal2,
+.modal3 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -151,7 +155,8 @@ img {
   font-size: var(--font-size);
   text-transform: uppercase;
 }
-.modal-content, .modal2-content {
+.modal-content,
+.modal2-content {
   background-color: var(--modal-content-color);
   margin: 5% auto;
   padding: 20px;
@@ -159,7 +164,7 @@ img {
   width: 30%;
   border-radius: var(--border-radius);
 }
-.modal3-content{
+.modal3-content {
   background-color: var(--modal-content-color);
   margin: 2% auto;
   padding: 20px;
@@ -168,7 +173,9 @@ img {
   border-radius: var(--border-radius);
   text-align: center;
 }
-.close-button, .close-button2, .close-button3 {
+.close-button,
+.close-button2,
+.close-button3 {
   color: var(--close-button-color);
   float: right;
   font-size: 30px;
@@ -183,7 +190,7 @@ img {
 
 .botao-remover img {
   width: 30px;
-  height: 30px; 
+  height: 30px;
 }
 
 svg.feather.feather-trash-2 {
@@ -192,9 +199,9 @@ svg.feather.feather-trash-2 {
   height: 30px;
 }
 
- svg.feather.feather-trash-2:hover {
+svg.feather.feather-trash-2:hover {
   fill: var(--primary-color-hover);
-} 
+}
 
 @media (max-width: 480px) {
   body {
@@ -203,10 +210,11 @@ svg.feather.feather-trash-2 {
     padding: 10px;
   }
   img {
-    width: 70%;
+    width: 95%;
     height: auto;
   }
-  h1, p {
+  h1,
+  p {
     font-size: var(--font-size-h1-alt);
   }
   #novaTarefa {
@@ -223,17 +231,21 @@ svg.feather.feather-trash-2 {
   #listaDeTarefas {
     width: 85%;
   }
-  .modal-content, .modal2-content, .modal3-content {
+  .modal-content,
+  .modal2-content,
+  .modal3-content {
     width: 80%;
     height: 10%;
     margin: 2% auto;
     border-radius: var(--border-radius);
   }
-  .modal, .modal2, .modal3{
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-style: oblique;
-  font-size: 12px;
-  text-transform: uppercase;
+  .modal,
+  .modal2,
+  .modal3 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-style: oblique;
+    font-size: 12px;
+    text-transform: uppercase;
   }
 }
