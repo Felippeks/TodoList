@@ -1,3 +1,11 @@
+:root {
+  --modal-font: Arial, sans-serif;
+  --modal-font-weight: 700;
+  --modal-font-style: oblique;
+  --modal-font-size: 16px;
+  --modal-text-transform: uppercase;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -14,18 +22,19 @@ h1 {
   text-align: center;
   font-size: xx-large;
   font-style: oblique;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
 }
+
 li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 button {
   background-color: #f5574c;
   color: white;
@@ -46,8 +55,8 @@ img {
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
-#novaTarefa {
-  width: 300px;
+
+#novaTarefa, #adicionarTarefa {
   padding: 8px;
   font-size: 16px;
   border-radius: 20px;
@@ -57,14 +66,7 @@ img {
 
 #adicionarTarefa {
   width: 100px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
   background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 #adicionarTarefa:hover {
@@ -99,6 +101,41 @@ img {
   animation: desintegrar 0.5s linear forwards;
 }
 
+.modal, .modal2, .modal3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  font-family: var(--modal-font);
+  font-weight: var(--modal-font-weight);
+  font-style: var(--modal-font-style);
+  font-size: var(--modal-font-size);
+  text-transform: var(--modal-text-transform);
+}
+
+.modal-content, .modal2-content, .modal3-content {
+  background-color: #f7dbdbd5;
+  margin: 5% auto;
+  padding: 20px;
+  border: 2px solid #888;
+  width: 30%;
+  border-radius: 20px;
+}
+
+.close-button, .close-button2, .close-button3 {
+  color: #e90e0e;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 18px;
@@ -118,21 +155,25 @@ img {
     justify-content: center;
     align-items: center;
   }
-  #novaTarefa {
-    padding: 14px;
-    font-size: 12px;
-    margin-top: 8px;
-  }
 
-  #adicionarTarefa {
-    display: block;
-    margin: auto;
-    padding: 10px;
+  #novaTarefa, #adicionarTarefa {
+    padding: 14px;
     font-size: 12px;
     margin-top: 8px;
   }
 
   #listaDeTarefas {
     width: 90%;
+  }
+
+  .modal-content, .modal2-content, .modal3-content {
+    width: 80%;
+    height: 10%;
+    margin: 2% auto;
+    border-radius: 20px;
+  }
+
+  .modal, .modal2, .modal3 {
+    font-size: 12px;
   }
 }

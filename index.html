@@ -7,15 +7,36 @@
     <title>Exercicio semana 05</title>
   </head>
   <body>
-    <img src="./assets/logo.png" alt="Logo"/>
+    <img src="./assets/logo.png" alt="Logo" />
     <h1>Minha Lista de Tarefas</h1>
 
     <div id="container">
       <input type="text" id="novaTarefa" placeholder="Digite uma nova tarefa" />
-      <button id="adicionarTarefa">Adicionar </button>
+      <button id="adicionarTarefa">Adicionar</button>
     </div>
 
     <ul id="listaDeTarefas"></ul>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <p>O campo de tarefa está vazio e precisa ser preenchido.</p>
+      </div>
+    </div>
+    <div id="modal2" class="modal2">
+      <div class="modal2-content">
+        <span class="close-button2">×</span>
+        <p>Essa tarefa já está na lista de tarefas.</p>
+      </div>
+    </div>
+    <div id="modal3" class="modal3">
+      <div class="modal3-content">
+        <span class="close-button3">×</span>
+        <p>Deseja realmente excluir a tarefa?</p>
+        <button id="confirmDelete">Sim</button>
+        <button id="cancelDelete">Não</button>
+      </div>
+    </div>    
   </body>
   <script src="./scripts/script.js"></script>
 </html>
