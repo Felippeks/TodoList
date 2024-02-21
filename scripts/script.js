@@ -43,7 +43,13 @@ function adicionarTarefaClick() {
   li.appendChild(tarefa);
 
   const botaoRemover = document.createElement("button");
-  botaoRemover.textContent = "x";
+  botaoRemover.classList.add("botao-remover");
+
+  const lixeiraSVG = document.createElement("img");
+  lixeiraSVG.src = "/assets/lixeira.svg";
+  lixeiraSVG.alt = "Lixeira";
+  botaoRemover.appendChild(lixeiraSVG);
+
   botaoRemover.addEventListener("click", function () {
     modal3.style.display = "block";
     modal3.tarefaParaExcluir = this.parentNode;

@@ -16,7 +16,6 @@
   --border-radius: 20px;
   --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -28,26 +27,27 @@ body {
   background-color: var(--background-color);
   font-family: var(--font-family);
 }
-
 h1 {
   text-align: center;
   font-size: var(--font-size-h1);
   font-style: oblique;
   font-family: var(--font-family);
 }
-
 ul {
   list-style-type: none;
   padding-left: 0;
 }
-
 li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-button {
+button{
+  text-align: center;
+  border: none;
+  margin-left: auto;
+}
+#confirmDelete, #cancelDelete {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
@@ -55,19 +55,18 @@ button {
   cursor: pointer;
   border-radius: var(--border-radius);
   margin-left: auto;
+  width: 80px;
+  height: 30px;
 }
-
-button:hover {
+#confirmDelete:hover, #cancelDelete:hover {
   background-color: var(--primary-color-hover);
 }
-
 img {
   width: 35%;
   height: 25%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
-
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +75,6 @@ img {
   max-width: 100%;
   gap: 20px;
 }
-
 #novaTarefa {
   width: 300px;
   padding: 8px;
@@ -85,7 +83,6 @@ img {
   border: navajowhite;
   box-shadow: var(--box-shadow);
 }
-
 #adicionarTarefa {
   width: 100px;
   padding: 10px;
@@ -97,11 +94,9 @@ img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
-
 #adicionarTarefa:hover {
   background-color: var(--secondary-color-hover);
 }
-
 #listaDeTarefas {
   width: 30%;
   background-color: #fff;
@@ -115,7 +110,6 @@ img {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.05em;
 }
-
 @keyframes desintegrar {
   0% {
     opacity: 1;
@@ -125,11 +119,9 @@ img {
     transform: scale(0.1);
   }
 }
-
 .desintegrando {
   animation: desintegrar 0.5s linear forwards;
 }
-
 .modal, .modal2, .modal3{
   display: none;
   position: fixed;
@@ -146,8 +138,7 @@ img {
   font-size: var(--font-size);
   text-transform: uppercase;
 }
-
-.modal-content, .modal2-content, .modal3-content {
+.modal-content, .modal2-content {
   background-color: var(--modal-content-color);
   margin: 5% auto;
   padding: 20px;
@@ -155,7 +146,14 @@ img {
   width: 30%;
   border-radius: var(--border-radius);
 }
-
+.modal3-content{
+  background-color: var(--modal-content-color);
+  margin: 2% auto;
+  padding: 20px;
+  border: 2px solid #888;
+  width: 30%;
+  border-radius: var(--border-radius);
+}
 .close-button, .close-button2, .close-button3 {
   color: var(--close-button-color);
   float: right;
@@ -164,28 +162,32 @@ img {
   cursor: pointer;
   margin-top: 8px;
 }
+.botao-remover {
+  border-radius: 50%;
+  background: none;
+}
 
+.botao-remover img {
+  width: 25px;
+  height: 25px; 
+}
 @media (max-width: 480px) {
   body {
     font-size: var(--font-size-alt);
     margin: 10px;
     padding: 10px;
   }
-
   img {
     width: 70%;
     height: auto;
   }
-
   h1 {
     font-size: var(--font-size-h1-alt);
   }
-
   #novaTarefa {
     padding: 14px;
     font-size: 12px;
   }
-
   #adicionarTarefa {
     display: block;
     margin: auto;
@@ -202,7 +204,6 @@ img {
     margin: 2% auto;
     border-radius: var(--border-radius);
   }
-
   .modal, .modal2, .modal3{
   font-family: var(--font-family);
   font-weight: 700;
