@@ -173,9 +173,13 @@ img {
 }
 
 svg.feather.feather-trash-2 {
-  fill: red;
+  fill: var(--primary-color);
   width: 30px;
   height: 30px;
+}
+
+svg.feather.feather-trash-2:hover {
+  fill: var(--primary-color-hover);
 }
 
 
