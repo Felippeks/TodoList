@@ -71,8 +71,17 @@ function keydownEvent(event) {
 }
 
 function confirmDeleteClick() {
-  modal3.tarefaParaExcluir.classList.add("desintegrando");
-  setTimeout(() => modal3.tarefaParaExcluir.remove(), 500);
+  const lixeiraSVG = modal3.tarefaParaExcluir.querySelector('.botao-remover svg');
+  lixeiraSVG.classList.add('lixeira-girando');
+
+  setTimeout(() => {
+    modal3.tarefaParaExcluir.classList.add("desintegrando");
+    setTimeout(() => {
+      modal3.tarefaParaExcluir.remove();
+      lixeiraSVG.classList.remove('lixeira-girando');
+    }, 500);
+  }, 300);
+
   modal3.style.display = "none";
 }
 

@@ -119,8 +119,22 @@ img {
     transform: scale(0.1);
   }
 }
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lixeira-girando {
+  animation: girar 0.5s linear;
+}
+
 .desintegrando {
-  animation: desintegrar 0.5s linear forwards;
+  animation: desintegrar 0.3s linear forwards;
 }
 .modal, .modal2, .modal3{
   display: none;
@@ -153,6 +167,7 @@ img {
   border: 2px solid #888;
   width: 30%;
   border-radius: var(--border-radius);
+  text-align: center;
 }
 .close-button, .close-button2, .close-button3 {
   color: var(--close-button-color);
@@ -168,20 +183,22 @@ img {
 }
 
 .botao-remover img {
-  width: 25px;
-  height: 25px; 
+  width: 30px;
+  height: 30px; 
 }
 
 svg.feather.feather-trash-2 {
-  fill: var(--primary-color);
+  fill: var(--secondary-color);
   width: 30px;
   height: 30px;
 }
 
-svg.feather.feather-trash-2:hover {
+/* svg.feather.feather-trash-2:hover {
+  fill: var(--primary-color-hover);
+} */
+svg.feather.feather-trash-2:active {
   fill: var(--primary-color-hover);
 }
-
 
 @media (max-width: 480px) {
   body {
