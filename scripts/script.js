@@ -26,6 +26,38 @@ function lerTarefasSalvas() {
   }
 }
 
+function recuperarTarefasSalvas() {
+  let tarefasSalvas = JSON.parse(localStorage.getItem("tarefas"));
+  if (tarefasSalvas) {
+    for (let i = 0; i < tarefasSalvas.length; i++) {
+      const li = document.createElement("li");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = tarefasSalvas[i].concluida;
+      li.appendChild(checkbox);
+      const tarefa = document.createElement("span");
+      tarefa.textContent = tarefasSalvas[i].texto;
+      if (tarefasSalvas[i].concluida) {
+        tarefa.style.textDecoration = "line-through";
+      }
+      li.appendChild(tarefa);
+      const botaoRemover = document.createElement("button");
+      botaoRemover.classList.add("botao-remover");
+      const lixeiraSVG = document.getElementById("lixeira").cloneNode(true);
+      lixeiraSVG.style.display = "block";
+      botaoRemover.appendChild(lixeiraSVG);
+      botaoRemover.addEventListener("click", function () {
+        modal3.style.display = "block";
+        modal3.tarefaParaExcluir = this.parentNode;
+      });
+      li.appendChild(botaoRemover);
+      listaDeTarefas.appendChild(li);
+    }
+  } else {
+    console.log("Não há tarefas salvas.");
+  }
+}
+
 function adicionarTarefaClick() {
   const valor = novaTarefa.value;
   if (valor === "") {
@@ -164,3 +196,4 @@ document.addEventListener("keydown", keydownEvent);
 confirmDelete.addEventListener("click", confirmDeleteClick);
 cancelDelete.addEventListener("click", cancelDeleteClick);
 
+window.onload = recuperarTarefasSalvas;

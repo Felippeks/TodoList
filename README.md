@@ -4,13 +4,15 @@ Este projeto é uma aplicação web simples para gerenciar uma lista de tarefas.
 
 ## Funcionalidades
 
-1. **Adicionar Tarefas**: Os usuários podem adicionar novas tarefas à lista. Para isso, basta digitar a tarefa no campo de texto e clicar no botão "Adicionar".
+1. **Adicionar Tarefas**: Os usuários podem adicionar novas tarefas à lista. Para isso, basta digitar a tarefa no campo de texto e clicar no botão "Adicionar". As tarefas são salvas no `localStorage`, então elas persistirão mesmo depois que a página for recarregada.
 
-2. **Marcar Tarefas como Concluídas**: As tarefas podem ser marcadas como concluídas ao clicar na caixa de seleção ao lado de cada tarefa. As tarefas concluídas são mostradas com um risco através do texto.
+2. **Marcar Tarefas como Concluídas**: As tarefas podem ser marcadas como concluídas ao clicar na caixa de seleção ao lado de cada tarefa. As tarefas concluídas são mostradas com um risco através do texto. O status de conclusão da tarefa também é salvo no `localStorage`.
 
-3. **Remover Tarefas**: Cada tarefa tem um botão de lixeira que, quando clicado, exibe um modal de confirmação. Os usuários podem confirmar ou cancelar a exclusão da tarefa.
+3. **Remover Tarefas**: Cada tarefa tem um botão de lixeira que, quando clicado, exibe um modal de confirmação. Os usuários podem confirmar ou cancelar a exclusão da tarefa. As tarefas excluídas são removidas do `localStorage`.
 
 4. **Contador de Tarefas**: O número total de tarefas é exibido no topo da lista.
+
+5. **Persistência de Dados**: Todas as tarefas são salvas no `localStorage` do navegador. Isso significa que as tarefas, seu status de conclusão e a ordem das tarefas serão preservados mesmo quando a página for recarregada ou fechada.
 
 ## Exemplos
 
